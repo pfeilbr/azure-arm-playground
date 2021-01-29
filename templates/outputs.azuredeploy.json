@@ -1,0 +1,21 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+         "myVariablePrefix": {
+             "type": "string",
+            "defaultValue": "myDefaultVariablePrefixValue"
+        }
+    },
+    "functions": [],
+    "variables": {
+        "myVariable": "[concat(parameters('myVariablePrefix'), 'myValue')]"
+    },
+    "resources": [],
+    "outputs": {
+        "myOutputVariable": {
+            "type": "string",
+            "value": "[variables('myVariable')]"
+        }
+    }
+}
